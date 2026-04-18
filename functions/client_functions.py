@@ -4,8 +4,6 @@ import time
 
 lock = threading.Lock()
 
-
-
 def conectar(PORT, HOST, num_reintentos = 3, tiempo_sleep = 1):
     for intento in range(num_reintentos):
         time.sleep(tiempo_sleep)
@@ -28,7 +26,7 @@ def escuchar_mensajes(socket_cliente):
             if not mensaje:
                 break
 
-            print("\n" + mensaje)
+            print(mensaje)
         except:
             print("[error] : [No conexion to server]")
             break

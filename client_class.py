@@ -1,5 +1,5 @@
 import threading
-from funciones.funciones_cliente import escuchar_mensajes, conectar
+from functions.client_functions import escuchar_mensajes, conectar
 
 class client:
 
