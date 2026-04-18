@@ -11,8 +11,9 @@ def conectar(PORT, HOST, num_reintentos = 3, tiempo_sleep = 1):
         time.sleep(tiempo_sleep)
         try:
             socket_cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            socket_cliente.connect((HOST, PORT))
+            socket_cliente.connect((PORT, HOST))
 
+            print("[conection] : success")
             return socket_cliente
         except Exception as e:
             print(f"[error] : [{e}] ; [reintento] : [{intento}]")
