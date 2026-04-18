@@ -1,4 +1,4 @@
-from client_class import client
+from client_server_code.client_class import client
 
 
 cliente = client(5000, "127.0.0.1")
